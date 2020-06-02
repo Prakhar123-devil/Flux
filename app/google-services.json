@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "158618548423",
+    "firebase_url": "https://flux-3cfb9.firebaseio.com",
+    "project_id": "flux-3cfb9",
+    "storage_bucket": "flux-3cfb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158618548423:android:8e2be94b417579f64d66e2",
+        "android_client_info": {
+          "package_name": "com.bioscope_vala.flux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158618548423-7upud7nme43qrcpk0aclguaic3qi25p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOkiX6G8J6hpkkI6HcqEZrQQE7aLFoJbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158618548423-7upud7nme43qrcpk0aclguaic3qi25p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
