@@ -52,7 +52,7 @@ public class ProfileFragment extends Fragment {
 
     StorageReference storageReference;
 
-    private static final int IMAGE_REQUEST = 1;
+    private static final int IMAGE_REQUEST = 2;
     private Uri imageUri;
     private StorageTask uploadTask;
 
@@ -119,11 +119,14 @@ public class ProfileFragment extends Fragment {
         pd.show();
         if (imageUri != null) {
             final StorageReference fileReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(imageUri));
-            uploadTask = fileReference.getFile(imageUri);
-            uploadTask.continueWith(new Continuation < UploadTask.TaskSnapshot, Task<Uri> >() {
+            Log.d("Flux",imageUri.toString() + "  "+ fileReference.toString());
+            uploadTask = fileReference.putFile(imageUri);
+            Log.d("Flux",uploadTask.toString());
+            uploadTask.continueWithTask(new Continuation < UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override
                 public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                     if (!task.isSuccessful()) {
+                        Log.d("Flux","task unsuccessful thorw exp");
                         throw task.getException();
                     }
                     return fileReference.getDownloadUrl();
@@ -149,12 +152,14 @@ public class ProfileFragment extends Fragment {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
+                    Log.d("Flux","in add failureListener");
                     Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 }
             });
 
         } else {
+            Log.d("Flux","no image selected");
             Toast.makeText(getContext(), "No image selected", Toast.LENGTH_SHORT).show();
         }
     }

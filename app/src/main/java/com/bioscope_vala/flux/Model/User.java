@@ -1,14 +1,34 @@
 package com.bioscope_vala.flux.Model;
 
 public class User {
+    private String search;
     private String id;
     private String username;
     private String imageURL;
+    private String status;
 
-    public User(String id, String username, String imageURL) {
+    public User(String id, String username, String imageURL,String search,String status) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
+        this.search = search;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 
     public User() {
