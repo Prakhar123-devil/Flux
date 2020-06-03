@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bioscope_vala.flux.Fragments.ChatsFragment;
+import com.bioscope_vala.flux.Fragments.ProfileFragment;
 import com.bioscope_vala.flux.Fragments.UsersFragment;
 import com.bioscope_vala.flux.Model.User;
 import com.bumptech.glide.Glide;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
         viewPagerAdapter.addFragment(new UsersFragment(), "Users");
+        viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
 
         viewPager.setAdapter(viewPagerAdapter);
 
