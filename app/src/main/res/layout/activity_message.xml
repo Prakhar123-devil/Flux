@@ -21,8 +21,8 @@
             app:popupTheme="@style/MenuStyle">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:id="@+id/profile_image" />
 
             <TextView
@@ -31,6 +31,7 @@
                 android:id="@+id/username"
                 android:layout_marginLeft="25dp"
                 android:text="Username"
+                android:textSize="20dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:layout_marginStart="25dp"/>
